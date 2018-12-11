@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 
-import counterReducerName, { inc, dec } from './counter'
+import counterReducerName from './counter'
 
 export const reducer = combineReducers({
     counterReducerName
@@ -18,7 +18,5 @@ const store = createStore(
 
 export default store
 
-window.dispatchIncAction = () => store.dispatch(inc())
-window.dispatchDecAction = () => store.dispatch(dec())
 
 // store.dispatch({ type: 'FIRST_ACTION' })
